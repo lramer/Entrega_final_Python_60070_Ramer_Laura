@@ -1,0 +1,20 @@
+{% extends 'padre.html' %}
+
+
+{% block contenidoquecambia %}
+
+<div class="container-md">
+<form action="{% url 'crear_coleccion' %}" method="post">{% csrf_token %}
+
+    {{form.as_p}}
+
+    <button type="submit">Crear</button>
+
+  </form>
+
+</div>    
+
+
+    
+{% endblock contenidoquecambia %}
+    

@@ -1,0 +1,42 @@
+{% extends 'padre.html' %}
+
+
+{% block contenidoquecambia %}
+
+
+
+    <h4>{{mensaje}}</h4>  
+
+    <div class="container"  >
+        <div class="bodysonlr;" ></div>
+        <!-- Columna para Comics -->
+        <div class="table-danger">
+            <h2>Comics</h2>
+            <p>Accede a la sección de Comics para ver o gestionar tus cómics.</p>
+            <a href="{% url 'lista_comics' %}">Ir a Comics</a>
+        
+        </div>
+     
+        <br>
+      
+
+        <!-- Columna para Colecciones -->
+        <div class="table-danger">
+            <h2>Colecciones</h2>
+            <p>Accede a la sección de Colecciones para gestionar tus colecciones de cómics.</p>
+            <a href="{% url 'colecciones' %}">Ir a Colecciones</a>
+          
+        </div>
+        
+    </div>
+
+    
+
+
+
+</div>
+
+<br>
+    
+{% endblock contenidoquecambia %}
+    

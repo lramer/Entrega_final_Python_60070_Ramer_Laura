@@ -1,0 +1,47 @@
+{% extends 'padre.html' %}
+
+
+{% block contenidoquecambia %}
+
+<div class="list-unstyled">
+
+
+<h1>Lista de Colecciones </h1>
+
+<ul>
+  
+  {% for coleccion in coleccion %}
+    <li class="list-unstyled">
+      <a href="{% url 'detalle_coleccion' coleccion.id %}">
+        {{ coleccion }}
+      </a>
+    </li>
+    <div style="display: flex; column-gap: 7px;">
+      <button class="button-secondary">
+        <a href="{% url 'elimina_coleccion' coleccion.id %}">Eliminar</a>
+      </button>
+      <button>
+        <a href="{% url 'modifica_coleccion' coleccion.id %}">Editar</a>
+      </button>
+      <button class="button-secondary">
+        <a href="{% url 'detalle_coleccion' coleccion.id %}">Detalle</a>
+      </button>
+    </div>
+  {% endfor %}
+    
+</ul>
+  
+    <a href="{% url 'crear_coleccion' %}">Crea Coleccion</a>
+     
+   
+  </div>
+
+   
+
+
+    
+
+
+    
+{% endblock contenidoquecambia %}
+    

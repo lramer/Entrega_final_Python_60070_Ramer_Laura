@@ -1,0 +1,46 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+{% block contenidoquecambia %}
+
+
+<h2>Lista de Comics </h2>
+
+<ul class="list-inline">
+  
+  {% for comic in comics %}
+    <li class="list-inline">
+      <a href="{% url 'detalle_comics' comic.id %}">
+        {{ comic }}
+      </a>
+    </li>
+    <div style="display: flex; column-gap: 7px;">
+      <button class="btn-outline-secondary">
+        <a href="{% url 'elimina_comics' comic.id %}">Eliminar</a>
+      </button>
+      <button class="btn-outline-secondary">
+        <a href="{% url 'modifica_comics' comic.id %}">Editar</a>
+      </button>
+      <button class="btn-outline-secondary">
+        <a href="{% url 'detalle_comics' comic.id %}">Detalle</a>
+      </button>
+
+      </div>
+        
+      </div>    
+  {% endfor %}
+    
+</ul>
+<br>
+  
+    <a href="{% url 'crear_comics' %}" style="display: inline;">Crea Comic</a>
+     
+  </div>  
+
+
+
+
+
+    
+{% endblock contenidoquecambia %}
+    

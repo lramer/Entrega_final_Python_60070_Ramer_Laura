@@ -1,0 +1,18 @@
+{% extends 'padre.html' %}
+
+
+{% block contenidoquecambia %}
+
+<form action="{% url 'elimina_comics' comic.id %}" method="post">{% csrf_token %}
+
+    <p>Estas seguro que deseas eliminar el registro?</p>
+
+    <button type="submit">Confirmar</button>
+    <button><a href="{% url 'lista_comics' %}">Cancelar</a></button>
+
+  </form>
+
+
+    
+{% endblock contenidoquecambia %}
+    

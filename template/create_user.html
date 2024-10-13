@@ -1,0 +1,18 @@
+{% extends 'padre.html' %}
+
+
+{% block contenidoquecambia %}
+
+    
+<h2> Alta de Usuario </h2>
+
+<form action = "{% url 'nuevo_usuario' %}" method="POST">{% csrf_token %}
+    
+    {{ form.as_p }}
+    
+    <button type="submit">Crear Usuario</button>
+</form>
+
+    
+{% endblock contenidoquecambia %}
+    

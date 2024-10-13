@@ -1,0 +1,18 @@
+{% extends 'padre.html' %}
+
+
+{% block contenidoquecambia %}
+
+
+<form action="{% url 'Agregar_Comentario' %}"  method="post">{% csrf_token %}
+
+    {{form.as_p}}
+
+    <button type="submit">Agregar Comentario</button>
+
+  </form>
+
+
+    
+{% endblock contenidoquecambia %}
+    

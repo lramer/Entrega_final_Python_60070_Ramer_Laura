@@ -1,0 +1,20 @@
+{% extends 'padre.html' %}
+
+{% block contenidoquecambia %}
+<div class="container">
+
+<form action="{% url 'editar_perfil' %}" method="post">{% csrf_token %}
+
+    {{form.as_p}}
+
+    <button type="submit">Editar perfil</button>
+
+  </form>
+<br>
+
+  
+  <a class="navbar-brand" href="{% url 'crear_avatar' %}">Crear Avatar</a>  
+  <br>
+</div>
+{% endblock contenidoquecambia %}
+        

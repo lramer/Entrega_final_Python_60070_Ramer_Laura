@@ -1,0 +1,58 @@
+
+### Caso de Usuario 1: Registro de Usuario y Creación de Colección
+
+**Descripción:** Un nuevo usuario se registra en la aplicación, agrega un cómic a su catálogo y crea una colección personal.
+
+**Pasos:**
+
+1. El usuario accede a la página de registro.
+2. **Caso exitoso:** Ingresa un nombre de usuario, correo electrónico y contraseña válidos.
+   - **Resultado esperado:** El registro es exitoso, y el usuario es redirigido al panel principal.
+   
+   **Posibles errores:**
+   - **Nombre de usuario ya existe:** El sistema muestra un mensaje de error como "El nombre de usuario ya está en uso".
+   - **Formato de correo no válido:** El sistema muestra un mensaje como "Por favor, ingrese un correo electrónico válido".
+   - **Contraseña demasiado corta:** El sistema debe advertir que la contraseña necesita más caracteres, mostrando "La contraseña debe tener al menos 8 caracteres".
+
+
+---
+
+### Caso de Usuario 2: Clasificación de Cómic por Formato y Edición
+
+**Descripción:** Un usuario clasifica un cómic según el formato y, si corresponde, ingresa el número de edición cuando selecciona el formato "Issue".
+
+**Pasos:**
+
+1. El usuario inicia sesión con credenciales válidas.
+   - **Posibles errores:** Si las credenciales son incorrectas, el sistema muestra "Usuario o contraseña incorrectos".
+   
+2. En el panel, selecciona la opción "Agregar cómic".
+3. **Caso exitoso:** Ingresa la información del cómic (título, autor, editorial) y selecciona el formato "Issue".
+4. **Caso exitoso:** Al seleccionar "Issue", se despliega un campo adicional para ingresar el número de edición.
+5. **Caso exitoso:** Ingresa el número de edición (ejemplo: #1) y guarda el cómic.
+   - **Resultado esperado:** El cómic aparece en el catálogo personal con el formato y número de edición correctamente visibles.
+
+   **Posibles errores:**
+   - **No se ingresó el número de edición al seleccionar "Issue":** El sistema debería advertir "Debe ingresar un número de edición para el formato 'Issue'".
+   - **Formato de número inválido:** Si el número de edición contiene caracteres no permitidos, el sistema debería mostrar "El número de edición debe ser un número válido".
+
+
+### Caso de Usuario 3:  Creación de Colección
+
+**Descripción:** Agrega un cómic a su catálogo y crea una colección personal.
+
+**Pasos:**
+
+   
+1. En el panel, selecciona la opción "Agregar cómic".
+2. **Caso exitoso:** Ingresa la información del cómic (título, autor, editorial, y formato) y guarda el cómic.
+   - **Resultado esperado:** El cómic es guardado correctamente y aparece en el catálogo del usuario.
+
+   **Posibles errores:**
+   - **Campos obligatorios vacíos:** Si faltan datos importantes (título, autor, etc.), el sistema muestra un mensaje como "Todos los campos obligatorios deben estar completos".
+   
+3. El usuario selecciona "Crear colección", le asigna un nombre (ejemplo: "Favoritos") y agrega el cómic.
+   - **Resultado esperado:** La colección se crea exitosamente y el cómic aparece en ella.
+
+   **Posibles errores:**
+   - **Nombre de colección vacío o repetido:** El sistema debería advertir "El nombre de la colección no puede estar vacío" o "Ya tienes una colección con este nombre".

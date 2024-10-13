@@ -1,0 +1,18 @@
+{% extends 'padre.html' %}
+
+
+{% block contenidoquecambia %}
+
+<div class="container-md">
+<form action="{% url 'crear_avatar' %}" enctype="multipart/form-data" method="post">{% csrf_token %}
+
+    {{form.as_p}}
+
+    <button type="submit">Crear Avatar</button>
+
+  </form>
+
+</div>
+    
+{% endblock contenidoquecambia %}
+    

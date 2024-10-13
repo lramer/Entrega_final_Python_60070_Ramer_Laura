@@ -1,0 +1,35 @@
+{% extends 'padre.html' %}
+{% load static %}
+
+{% block contenidoquecambia %}
+
+
+<h1>
+    
+  <h3>Vista en detalle del Comic</h3>
+
+  <h5>Titulo: {{comics.titulo}}
+    <br>
+     Autor : {{comics.autor}}
+     <br>
+     Editorial: {{comics.editorial}}
+     <br>
+      descripcion : {{comics.descripcion}}
+     <br>
+    <div class=" container">
+      {{comics.portada}}
+    </div>
+     
+  </h5>
+  
+
+   
+    
+</h1>
+
+    
+
+
+    
+{% endblock contenidoquecambia %}
+    

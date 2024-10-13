@@ -1,0 +1,48 @@
+<nav class="navbar navbar-light bg-light static-top">
+  <div class="container">
+    <div class="home-button">
+      <a class="navbar-brand" href="{% url 'inicio' %}">Inicio</a>
+    
+
+  </div>
+  <a class="navbar-brand" href="{% url 'nuevo_usuario' %}">Nuevo Usuario</a>
+  <a class="navbar-brand" href="{% url 'about' %}">Acerca de...</a>
+  <a class="navbar-brand" href="{% url 'contacto' %}">Contacto.</a>
+  
+    {% if user.is_authenticated %}
+         
+ 
+      <p class="navbar-nav">Bienvenido {{user.username}}</p>
+      
+      {% if url %}
+        <img src="{{url}}"  alt="avatar" class="avatar-size">
+      {% endif %}
+
+   
+         <p></p>
+         <p></p>     
+      <form action="{% url 'logout' %}" method="post">{% csrf_token %}
+        <button class="btn btn-secondary" type="submit">Cerrar sesión</button>
+      </form>
+  
+    {% else %}
+      <a class="btn btn-secondary" href="{% url 'login' %}">Iniciar Sesion</a>
+    {% endif %}
+
+    {% if user.is_authenticated %}
+    
+   
+    <form action="{% url 'editar_perfil' %}" method="post">{% csrf_token %}
+      <button class="btn btn-secondary" type="submit">Editar Perfil</button>
+    </form>
+ 
+  {% endif %}
+
+
+ 
+
+
+      
+
+  </div>
+</nav>

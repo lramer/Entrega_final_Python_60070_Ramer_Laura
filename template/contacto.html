@@ -1,0 +1,22 @@
+{% extends 'padre.html' %}
+
+
+
+{% block contenidoquecambia %}
+
+{% load static %}
+
+<div class="form">
+    <p>Dejanos Tu mensaje </p>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Enviar</button>
+</form>
+</div>
+    
+
+ 
+    
+{% endblock contenidoquecambia %}
+    
