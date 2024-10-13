@@ -1,25 +1,32 @@
 Comic Collection Manager
 
 Descripción
+
 El Comic Collection Manager es una aplicación web desarrollada en Django que permite a los usuarios gestionar su colección de cómics. Los usuarios pueden agregar cómics a su catálogo personal, crear colecciones personalizadas y clasificar los cómics según diferentes categorías. La aplicación está diseñada para facilitar el seguimiento de los cómics que poseen, permitiendo una fácil organización y visualización.
 
 Funcionalidades
+
 Gestión de cómics: Los usuarios pueden agregar, editar y eliminar cómics de su colección personal.
-Clasificación de cómics: Los cómics se pueden clasificar por formato (TP, HC, Issue), y si el formato es Issue, se puede especificar el número de la entrega.
 Creación de colecciones personalizadas: Los usuarios pueden crear múltiples colecciones para organizar sus cómics, y agregar cómics a esas colecciones.
+
 Autenticación de usuarios: Los usuarios pueden registrarse, iniciar sesión y tener acceso a sus colecciones personales.
-Modelos principales
+Modelos principales.
+
 User: Los usuarios registrados pueden crear y gestionar sus colecciones.
-Comic: Cada cómic tiene un título, autor, editorial, y un formato (TP, HC, Issue). En el caso del formato Issue, también incluye un campo para el número de entrega.
+
+Comic: Cada cómic tiene un título, autor, editorial, y  un campo para el número de entrega.
+
 Colección: Un usuario puede tener múltiples colecciones, y cada colección contiene varios cómics.
+
 Instalación
+
 Clona el repositorio:
 
 
 bash
 Copy code
-git clone https://github.com/usuario/comic-collection-manager.git
-cd comic-collection-manager
+git clone https://github.com/lramer/Entrega_final_Python_60070_Ramer_Laura.git
+cd Entrega_final_Python_60070_Ramer_Laura
 
 Crea y activa un entorno virtual:
 
@@ -39,16 +46,18 @@ Configura las migraciones y la base de datos:
 bash
 Copy code
 python manage.py migrate
+
 Inicia el servidor:
 
 bash
 Copy code
 python manage.py runserver
+
 Accede a la aplicación en el navegador:
 
 
 Copy code
-http://localhost:8000/
+http://localhost:8000/inicio/
 
 Uso
 
